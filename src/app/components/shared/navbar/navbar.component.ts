@@ -6,8 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styles: []
 })
 export class NavbarComponent implements OnInit {
-
-  constructor() { }
+  name: string;
+  constructor() {
+    this.name = 'delAmux';
+  }
 
   ngOnInit() {
   }
