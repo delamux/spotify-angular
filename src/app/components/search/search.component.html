@@ -1,1 +1,14 @@
-<p>search works!</p>
+<div class="row">
+  <div class="col">
+    <input #term type="text" (keyup)="search(term.value)" class="form-control" placeholder="Search Artist">
+  </div>
+</div>
+<div class="row m-5">
+  <div class="col">
+    <div class="container">
+      <div class="card-columns">
+        <app-artist-card [item]="artist" *ngFor="let artist of artists"></app-artist-card>
+      </div>
+    </div>
+  </div>
+</div>

@@ -7,7 +7,7 @@ import {HttpHeaders} from '@angular/common/http';
 export const environment = {
   production: false,
   headers: new HttpHeaders({
-    Authorization: 'Bearer BQAadVeUupZflfIYqCItaOfItILY1Tn_xU7g23NCxzNqyOhsJpYLPzCiSptRxEo0XrnPEh-qfjvqDGlQ8UM'
+    Authorization: 'Bearer BQD67c1V6OaR7HqlkR-CJIOItBMjGPhGI-fluMz4tGxOmDhQL8rwct3hppi1DgxcQoMVjgK5JdyaXGKoCUE'
   })
 };
 

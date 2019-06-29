@@ -6,7 +6,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styles: []
 })
 export class ArtistCardComponent implements OnInit {
-  @Input() album: any;
+  @Input() item: any;
   constructor() { }
 
   ngOnInit() {

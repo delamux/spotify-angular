@@ -11,6 +11,7 @@ import { SearchComponent } from './components/search/search.component';
 import { ArtistComponent } from './components/artist/artist.component';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { ArtistCardComponent } from './components/artist-card/artist-card.component';
+import { NoimagePipe } from './pipes/noimage.pipe';
 
 // Services
 
@@ -21,7 +22,8 @@ import { ArtistCardComponent } from './components/artist-card/artist-card.compon
     SearchComponent,
     ArtistComponent,
     NavbarComponent,
-    ArtistCardComponent
+    ArtistCardComponent,
+    NoimagePipe
   ],
   imports: [
     BrowserModule,
