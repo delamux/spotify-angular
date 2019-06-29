@@ -3,7 +3,9 @@
   <div class="card-body">
     <h5 class="card-title">{{ album.name }}</h5>
     <p class="card-text">
-      <span *ngFor="let artist of album.artists" class="badge badge-pill badge-secondary">{{ artist.name }}</span>
+      <span *ngFor="let artist of album.artists" class="badge badge-pill badge-secondary">
+        {{ artist.name }}
+      </span>
     </p>
   </div>
 </div>
