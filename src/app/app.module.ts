@@ -12,6 +12,7 @@ import { ArtistComponent } from './components/artist/artist.component';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { ArtistCardComponent } from './components/artist-card/artist-card.component';
 import { NoimagePipe } from './pipes/noimage.pipe';
+import { LoadingComponent } from './components/shared/loading/loading.component';
 
 // Services
 
@@ -23,7 +24,8 @@ import { NoimagePipe } from './pipes/noimage.pipe';
     ArtistComponent,
     NavbarComponent,
     ArtistCardComponent,
-    NoimagePipe
+    NoimagePipe,
+    LoadingComponent
   ],
   imports: [
     BrowserModule,

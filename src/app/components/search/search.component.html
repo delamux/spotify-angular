@@ -6,8 +6,9 @@
 <div class="row m-5">
   <div class="col">
     <div class="container">
-      <div class="card-columns">
-        <app-artist-card [item]="artist" *ngFor="let artist of artists"></app-artist-card>
+      <app-loading *ngIf="isLoading" class="m-5"></app-loading>
+      <div class="card-columns" *ngIf="!isLoading" >
+        <app-artist-card  [item]="artist" *ngFor="let artist of artists"></app-artist-card>
       </div>
     </div>
   </div>

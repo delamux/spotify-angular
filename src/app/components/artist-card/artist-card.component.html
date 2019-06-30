@@ -1,5 +1,5 @@
 <div class="card">
-  <img class="card-img-top" [src]="item.images | noimage" alt="Card image cap">
+  <img (click)="viewArtist(item.id)" class="card-img-top pointer" [src]="item.images | noimage" alt="Card image cap">
   <div class="card-body">
     <h5 class="card-title">{{ item.name }}</h5>
     <p class="card-text">
