@@ -3,7 +3,7 @@
 // The list of file replacements can be found in `angular.json`.
 
 import {HttpHeaders} from '@angular/common/http';
-const token = 'BQDOXYaXFWseIZg5_dzeMQK0i6DyoNNDtoIXioGMjB6xJeOaItYvQ0zgHMsKN2wJtQC2wwMjxn_QogUwIP8';
+const token = 'BQBhM59XbAXAktSEB96TYyoefAS8Ohs3zkDowAM3WMWDq4iQbB2H6-1nw-ca1TZWsKwWvEqp6skvVecQMyE';
 export const environment = {
   production: false,
   headers: new HttpHeaders({

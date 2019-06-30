@@ -1,4 +1,5 @@
-<div class="row">
+<app-loading *ngIf="isLoading"></app-loading>
+<div class="row" *ngIf="!isLoading">
   <div class="col-2">
     <img [src]="artist.images | noimage" alt="" class="img-thumbnail img-circle">
   </div>
@@ -14,5 +15,26 @@
     <button routerLink="/search" class="btn btn-outline-danger">
       Back
     </button>
+  </div>
+</div>
+<div class="row m-5">
+  <div class="col">
+    <table class="table table-dark">
+      <thead>
+      <tr>
+        <th>Photo</th>
+        <th>Album</th>
+        <th>Song</th>
+        <th>Preview</th>
+      </tr>
+      <tr *ngFor="let track of topTracks">
+        <td><img [src]="track.album.images | noimage" alt="" class="img-thumb"></td>
+        <td>{{ track.album.name }}</td>
+        <td>{{ track.name }}</td>
+        <td>
+          <iframe [src]="track.album.id | safetyDom:'https://open.spotify.com/embed/album/'" width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+      </tr>
+      </thead>
+    </table>
   </div>
 </div>

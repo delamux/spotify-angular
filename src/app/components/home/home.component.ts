@@ -9,12 +9,20 @@ import {SpotifyService} from '../../services/spotify.service';
 export class HomeComponent {
   albums: any;
   isLoading: boolean;
+  hasError: boolean;
+  error: object;
   constructor(private spotify: SpotifyService) {
     this.isLoading = true;
+    this.hasError = false;
     this.spotify.getNewReleases()
       .subscribe( (data) => {
         this.albums = data;
         this.isLoading = false;
+      }, error => {
+        console.log(error);
+
+        this.hasError = true;
+        this.error = error;
       });
   }
 }

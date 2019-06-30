@@ -9,7 +9,7 @@ import { map } from 'rxjs/operators';
 export class SpotifyService {
 
   constructor(private http: HttpClient) {}
-  getQuery(query: string) {
+  private getQuery(query: string) {
     const url = `https://api.spotify.com/v1/${query}`;
     const headers = {
       headers: environment.headers
@@ -36,5 +36,13 @@ export class SpotifyService {
 
   getArtist(id: string) {
     return this.getQuery(`artists/${ id }`);
+  }
+
+  getArtistTopTracks(id: string) {
+    return this.getQuery( `artists/${ id }/top-tracks?country=es` )
+      .pipe( map( (data: any) => {
+        return data.tracks;
+      })
+    );
   }
 }
